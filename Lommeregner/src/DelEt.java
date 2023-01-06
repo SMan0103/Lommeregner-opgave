@@ -3,7 +3,7 @@ import java.awt.event.*;
 import java.awt.*;
 public class DelEt implements ActionListener{  
     JTextField tf1;  
-    JButton b1,b2, bN0, bN1, bN2, bN3, bN4, bN5, bN6, bN7, bN8, bN9;  
+    JButton b1,b2, bN0, bN1, bN2, bN3, bN4, bN5, bN6, bN7, bN8, bN9, bNE, bTP; 
     DelEt(){  
         JFrame f= new JFrame();  
         tf1=new JTextField();  
@@ -35,6 +35,10 @@ public class DelEt implements ActionListener{
         bN8.setBounds(150,200,50,50);
         bN9 = new JButton("9");
         bN9.setBounds(100,250,50,50);
+        bNE = new JButton("=");
+        bNE.setBounds(150,250,50,50);
+        bTP = new JButton("+");
+        bTP.setBounds(200,200,50,50);
 
 
         
@@ -50,12 +54,15 @@ public class DelEt implements ActionListener{
         bN7.addActionListener(this);
         bN8.addActionListener(this);
         bN9.addActionListener(this);
+        bNE.addActionListener(this);
+        bTP.addActionListener(this);
+        
 
         // Font
         b1.setFont(new Font("Arial", Font.BOLD, 20));
         
         
-        f.add(tf1); f.add(b1); f.add(b2); f.add(bN0); f.add(bN1); f.add(bN2); f.add(bN3); f.add(bN4); f.add(bN5); f.add(bN6); f.add(bN7); f.add(bN8); f.add(bN9);
+        f.add(tf1); f.add(b1); f.add(b2); f.add(bN0); f.add(bN1); f.add(bN2); f.add(bN3); f.add(bN4); f.add(bN5); f.add(bN6); f.add(bN7); f.add(bN8); f.add(bN9); f.add(bNE); f.add(bTP);
         f.setSize(300,400);  
         f.setLayout(null);  
         f.setVisible(true);  
@@ -65,7 +72,8 @@ public class DelEt implements ActionListener{
     public void actionPerformed(ActionEvent e) {  
 
         int tekst_length = tf1.getText().length();
-
+        double tal = 0; 
+        double resultalt = 0;
         if(e.getSource() == b2){
             tf1.setText(tf1.getText().substring(0, tekst_length - 1));
         }
@@ -73,6 +81,56 @@ public class DelEt implements ActionListener{
         if(e.getSource() == b1){
             tf1.setText("");
         }
+        
+        // tal
+        if(e.getSource() == bN0){
+            tf1.setText(tf1.getText() + "0");
+        }
+        if(e.getSource() == bN1){
+            tf1.setText(tf1.getText() + "1");
+            tal += 1;
+        }
+        if(e.getSource() == bN2){
+            tf1.setText(tf1.getText() + "2");
+            tal += 2;
+        }
+        if(e.getSource() == bN3){
+            tf1.setText(tf1.getText() + "3");
+            tal += 3;
+        }
+        if(e.getSource() == bN4){
+            tf1.setText(tf1.getText() + "4");
+            tal += 4;
+        }
+        if(e.getSource() == bN5){
+            tf1.setText(tf1.getText() + "5");
+            tal += 5;
+        }
+        if(e.getSource() == bN6){
+            tf1.setText(tf1.getText() + "6");
+            tal += 6;
+        }
+        if(e.getSource() == bN7){
+            tf1.setText(tf1.getText() + "7");
+            tal += 7;
+        }
+        if(e.getSource() == bN8){
+            tf1.setText(tf1.getText() + "8");
+            tal += 8;
+        }
+        if(e.getSource() == bN9){
+            tf1.setText(tf1.getText() + "9");
+            tal += 9;
+        }
+        if(e.getSource() == bTP){
+            tf1.setText(tf1.getText() + "+");
+            resultalt += tal;
+        }
+        if(e.getSource() == bNE){
+            double resultaltet = tal;
+            tf1.setText(tf1.getText() + "=" + resultalt);
+        }
+
     }
 
     public static void main(String[] args) {  
