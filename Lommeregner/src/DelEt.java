@@ -134,6 +134,8 @@ public class DelEt implements ActionListener{
             tf1.setText(tf1.getText() + "=" + resutalt);
         }
 
+        
+
     }
 
     public static void main(String[] args) {  
