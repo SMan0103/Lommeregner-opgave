@@ -70,10 +70,11 @@ public class DelEt implements ActionListener{
         
     }         
     public void actionPerformed(ActionEvent e) {  
+        
+        double resutalt = 0;
 
         int tekst_length = tf1.getText().length();
-        double tal = 0; 
-        double resultalt = 0;
+    
         if(e.getSource() == b2){
             tf1.setText(tf1.getText().substring(0, tekst_length - 1));
         }
@@ -85,50 +86,52 @@ public class DelEt implements ActionListener{
         // tal
         if(e.getSource() == bN0){
             tf1.setText(tf1.getText() + "0");
+
         }
-        if(e.getSource() == bN1){
+        else if(e.getSource() == bN1){
             tf1.setText(tf1.getText() + "1");
-            tal += 1;
+            
         }
-        if(e.getSource() == bN2){
+        else if(e.getSource() == bN2){
             tf1.setText(tf1.getText() + "2");
-            tal += 2;
+            
         }
-        if(e.getSource() == bN3){
+        else if(e.getSource() == bN3){
             tf1.setText(tf1.getText() + "3");
-            tal += 3;
+            
         }
-        if(e.getSource() == bN4){
+        else if(e.getSource() == bN4){
             tf1.setText(tf1.getText() + "4");
-            tal += 4;
+            
         }
-        if(e.getSource() == bN5){
+        else if(e.getSource() == bN5){
             tf1.setText(tf1.getText() + "5");
-            tal += 5;
+            
         }
-        if(e.getSource() == bN6){
+        else if(e.getSource() == bN6){
             tf1.setText(tf1.getText() + "6");
-            tal += 6;
+            
         }
-        if(e.getSource() == bN7){
+        else if(e.getSource() == bN7){
             tf1.setText(tf1.getText() + "7");
-            tal += 7;
+            
         }
-        if(e.getSource() == bN8){
+        else if(e.getSource() == bN8){
             tf1.setText(tf1.getText() + "8");
-            tal += 8;
+            
         }
-        if(e.getSource() == bN9){
+        else if(e.getSource() == bN9){
             tf1.setText(tf1.getText() + "9");
-            tal += 9;
+            
         }
-        if(e.getSource() == bTP){
+        else if(e.getSource() == bTP){
             tf1.setText(tf1.getText() + "+");
-            resultalt += tal;
+            
         }
-        if(e.getSource() == bNE){
-            double resultaltet = tal;
-            tf1.setText(tf1.getText() + "=" + resultalt);
+        else if(e.getSource() == bNE){
+            
+            
+            tf1.setText(tf1.getText() + "=" + resutalt);
         }
 
     }

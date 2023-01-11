@@ -73,6 +73,49 @@ public class OpgaveTo implements ActionListener{
         if(e.getSource() == b1){
             tf1.setText("");
         }
+
+                // tal
+                if(e.getSource() == bN0){
+                    tf1.setText(tf1.getText() + "0");
+        
+                }
+                else if(e.getSource() == bN1){
+                    tf1.setText(tf1.getText() + "1");
+                    
+                }
+                else if(e.getSource() == bN2){
+                    tf1.setText(tf1.getText() + "2");
+                    
+                }
+                else if(e.getSource() == bN3){
+                    tf1.setText(tf1.getText() + "3");
+                    
+                }
+                else if(e.getSource() == bN4){
+                    tf1.setText(tf1.getText() + "4");
+                    
+                }
+                else if(e.getSource() == bN5){
+                    tf1.setText(tf1.getText() + "5");
+                    
+                }
+                else if(e.getSource() == bN6){
+                    tf1.setText(tf1.getText() + "6");
+                    
+                }
+                else if(e.getSource() == bN7){
+                    tf1.setText(tf1.getText() + "7");
+                    
+                }
+                else if(e.getSource() == bN8){
+                    tf1.setText(tf1.getText() + "8");
+                    
+                }
+                else if(e.getSource() == bN9){
+                    tf1.setText(tf1.getText() + "9");
+                    
+                }
+
     }
 
     public static void main(String[] args) {  
