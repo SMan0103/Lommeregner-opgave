@@ -4,9 +4,9 @@ import java.awt.*;
 public class DelEt implements ActionListener{  
     JTextField tf1;  
     JButton b1,b2, bN0, bN1, bN2, bN3, bN4, bN5, bN6, bN7, bN8, bN9, bNE, bTP; 
+    JFrame f = new JFrame();  
     DelEt(){  
-        JFrame f= new JFrame();  
-        tf1=new JTextField();  
+        tf1 = new JTextField();  
         tf1.setBounds(50,50,150,20);
         tf1.setEditable(false);
         
@@ -68,7 +68,8 @@ public class DelEt implements ActionListener{
         f.setVisible(true);  
 
         
-    }         
+    }  
+           
     public void actionPerformed(ActionEvent e) {  
         
         double resutalt = 0;

@@ -1,3 +1,4 @@
+
 public class Andengradslining {
     int a;
     int b;
@@ -10,6 +11,7 @@ public class Andengradslining {
         c = -5;
         x1 = (-b + Math.sqrt(Math.pow(b, 2) - 4 * a * c)) / (2 * a);
         x2 = (-b - Math.sqrt(Math.pow(b, 2) - 4 * a * c)) / (2 * a);
+        
     }
   
     public static void main(String[] args) {
