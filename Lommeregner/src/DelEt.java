@@ -1,6 +1,7 @@
 import javax.swing.*;  
 import java.awt.event.*;  
 import java.awt.*;
+
 public class DelEt implements ActionListener{  
     JTextField tf1;  
     JButton b1,b2, bN0, bN1, bN2, bN3, bN4, bN5, bN6, bN7, bN8, bN9, bNE, bTP; 
@@ -71,10 +72,10 @@ public class DelEt implements ActionListener{
     }  
            
     public void actionPerformed(ActionEvent e) {  
-        
-        double resutalt = 0;
-
+        int calculation = 0;
+        double number = 0;
         int tekst_length = tf1.getText().length();
+        float svar = 0;
     
         if(e.getSource() == b2){
             tf1.setText(tf1.getText().substring(0, tekst_length - 1));
@@ -126,13 +127,29 @@ public class DelEt implements ActionListener{
             
         }
         else if(e.getSource() == bTP){
+            String str = tf1.getText();
             tf1.setText(tf1.getText() + "+");
             
+            
+            
+            number = Double.parseDouble(tf1.getText());
+            tf1.setText("");
+            tf1.setText(str + "+");
+            calculation = 1;
         }
         else if(e.getSource() == bNE){
+            switch (calculation) {
+                case 1:
+                    svar = (float) (number + Double.parseDouble(tf1.getText()));
+                    if (Double.toString(svar).endsWith(".0")) {
+                        tf1.setText(Double.toString(svar).replace(".0", ""));
+                    } else {
+                        tf1.setText(Double.toString(svar));
+                    }
+                    tf1.setText("");
+                    break;
             
-            
-            tf1.setText(tf1.getText() + "=" + resutalt);
+            }
         }
 
         
